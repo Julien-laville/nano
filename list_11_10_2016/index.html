@@ -1,0 +1,106 @@
+<!doctype html>
+<title>Exo list</title>
+<meta charset="utf-8">
+
+<script>
+/* We must be approaching the middle of the autumn academic term, because the beginning-programmer message boards are starting to fill up with linked-list exercises; one enterprising fellow even sent me an email asking for help on his homework. Here are three tasks that involve manipulating linked lists. We’ve probably done all three before, and they’re simple enough for many of the people that read and respond here, but learners seem to have trouble with them, so we’ll discuss them here:
+
+        Write a function that takes a linked list of integers and returns a new linked list with all the odd integers removed.
+        
+        Write a function that removes every nth item from a linked list.
+        
+        Write a function that reverses the two halves of a list; if the number of items in the list is odd, the middle element should go with the second half of the list
+
+Your task is to write the three functions described above. When you are finished, you are welcome to read or run a suggested solution, or to post your own solution or discuss the exercise in the comments below. */
+
+    
+    
+    /* First we need to create a linked list */
+
+        // 		this.currentImage += n;
+
+
+        
+    
+    function List(i) {
+        this.next = null
+        this.integer = i
+    }
+    
+    function add(i,head) { 
+        var tmp = new List(i);
+        tmp.next = head
+        return tmp
+    } 
+    
+    function keepOdds(head) {
+        
+    }
+    
+    
+    function removeNth(nth, list) {
+        if(nth == 0 && list.next) {
+            return list.next
+        } else if(nth == 0) {
+            return null
+        }
+        var tmp = list;
+        for(var i = 0; i < nth && tmp.next; i ++) {
+            tmp = tmp.next
+        }
+        if(tmp.next.next)
+            tmp.next = tmp.next.next
+        else 
+            tmp.next = null
+            
+        return list;
+    }
+    
+    
+    function reverseTwoHalves(list) {
+        var size = 0 
+        while(list.next) {
+            size ++;
+            var next = list.next
+        }
+        
+        
+    }
+    
+    function reverse(list) {
+        var newList = new List()
+        while(list.next) {
+            tmp = list.next
+            
+            
+        }
+    }
+    
+    function cat(l1,l2) {
+           while(l1.next) {
+               l1 = l1.next
+           } 
+        l1.next = l2 
+    }
+   
+    
+    function print(a) {
+        if(a.next) {
+            return print(a.next) + ' ' + a.integer
+        } else {
+            return ''// a.integer
+        }
+    }
+    var test = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    
+    var a = new List(test.slice())
+    test.forEach(function(testI) {
+        a = add(testI,a)
+    })
+
+    a = removeNth(4,a)
+    
+    console.log(print(a))
+
+</script>
+
